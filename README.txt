@@ -205,7 +205,7 @@ Main Changes:
 - Tweaked l4d2_startercommon: it now lowers the common limit on round start and instantly resets it upon leaving saferoom.
 - Added caster_assister to help spectators, especially streamers/casters, move around more naturally.
 - Added tank rock selector plugin, CanadaRox's version: just pressing Use or Reload alone will start the rock throw.
-- Added l4d2_spitdontswallow to allow people to opt for a spitter during tank fights.
+- Added l4d2_spitter_manage to allow people to opt for a new SI if they have a spitter when tank spawns. Press R.
 - Added staggersolver to block button presses during stumbles.
 - Removed No Mercy 5 and Dead Center 4 wipefest flow tanks.
 - The 2nd finale tank (not counting possible flow tanks) is now blocked, to makes finales shorter and more survivable.
@@ -219,6 +219,12 @@ Main Changes:
 - Engine Fixes are applied (Picking up players won't prevent fall damage)
 - Blocked texture manager mathack.
 - Heavily reworked map distances. They were initially based on a mix of the typical distance and health scores as logged by the l4d2-logger, on a scale of 300 to 1000 (300 for parish 1, which was used as the base), with small human adjustments and about ~150-200 points being removed for each tank that will be blocked in 4.0. With the shift to DB, the goal will be to base the maximum distance scores strictly on the average damage bonus people have at the end of the map (another benefit of DB is that we can do that and end up with perfect scoring balance).
+- Changed charger scratch damage to 8 per hit.
+- Removed water slowdown
+- Replaced tank control plugin with Arti's new one. Now works with Custom Map Transitions and has new functionality like !givetank for admins.
+- Added tank pain fade, screen flashes red when being meleed from behind.
+- Reintroduced legacy "!match configname" feature. Note: Must type name correct. If you aren't 100% sure, just use the normal !match menu.
+- Added glowism plugin. Call the vote in game with !realism to enable realism cvars. Saying !noglows will call a vote to only disable glows. (!glows and !unrealism will disable; admins can force either one)
 
 Other Changes:
 - Added witch_announce and other small plugins that were needed or popularly requested, like the ones listed at the end of the Main Changes (thanks to Jahze, Sir and Visor).
