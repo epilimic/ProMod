@@ -88,6 +88,7 @@ public OnPluginStart()
 
 	RegAdminCmd("sm_caster", Caster_Cmd, ADMFLAG_BAN, "Registers a player as a caster so the round will not go live unless they are ready");
 	RegAdminCmd("sm_forcestart", ForceStart_Cmd, ADMFLAG_BAN, "Forces the round to start regardless of player ready status.  Players can unready to stop a force");
+	RegAdminCmd("sm_fs", ForceStart_Cmd, ADMFLAG_BAN, "Forces the round to start regardless of player ready status.  Players can unready to stop a force");
 	RegConsoleCmd("\x73\x6d\x5f\x62\x6f\x6e\x65\x73\x61\x77", Secret_Cmd, "Every player has a different secret number between 0-1023");
 	RegConsoleCmd("sm_hide", Hide_Cmd, "Hides the ready-up panel so other menus can be seen");
 	RegConsoleCmd("sm_show", Show_Cmd, "Shows a hidden ready-up panel");
@@ -120,6 +121,7 @@ public OnMapStart()
 	{
 		blockSecretSpam[client] = false;
 	}
+	readyCountdownTimer = INVALID_HANDLE;
 }
 
 /* This ensures all cvars are reset if the map is changed during ready-up */
@@ -274,7 +276,10 @@ public Action:NotCasting_Cmd(client, args)
 
 public Action:ForceStart_Cmd(client, args)
 {
-	InitiateLiveCountdown();
+	if (inReadyUp)
+	{
+		InitiateLiveCountdown();
+	}
 	return Plugin_Handled;
 }
 
@@ -388,7 +393,12 @@ public Action:L4D_OnFirstSurvivorLeftSafeArea(client)
 
 public Action:Return_Cmd(client, args)
 {
-	ReturnPlayerToSaferoom(client, false);
+	if (client > 0
+			&& inReadyUp
+			&& L4D2Team:GetClientTeam(client) == L4D2Team_Survivor)
+	{
+		ReturnPlayerToSaferoom(client, false);
+	}
 	return Plugin_Handled;
 }
 
@@ -581,6 +591,12 @@ InitiateLive(bool:real = true)
 	SetConVarBool(sb_stop, false);
 
 	L4D2_CTimerStart(L4D2CT_VersusStartTimer, 60.0);
+
+	for (new i = 0; i < 4; i++)
+	{
+		GameRules_SetProp("m_iVersusDistancePerSurvivor", 0, _,
+				i + 4 * GameRules_GetProp("m_bAreTeamsFlipped"));
+	}
 
 	for (new i = 0; i < MAX_FOOTERS; i++)
 	{
