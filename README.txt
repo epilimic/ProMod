@@ -225,6 +225,16 @@ Main Changes:
 - Added tank pain fade, screen flashes red when being meleed from behind.
 - Reintroduced legacy "!match configname" feature. Note: Must type name correct. If you aren't 100% sure, just use the normal !match menu.
 - Added glowism plugin. Call the vote in game with !realism to enable realism cvars. Saying !noglows will call a vote to only disable glows. (!glows and !unrealism will disable; admins can force either one)
+- Tank grace period reduced from 25 to 15. Tanks now immediately begin losing rage when they lose los (default 2 second buffer)
+- Modified or removed most or all of Promod 3.3.3's props. Props that hurt SI more than helped were tweaked or changed based on competitive feedback. Unnecessary/excessive props were removed.
+- Fixed or blocked several exploits, glitch spots, punch spots, and stuck spots
+- You no longer have to prespawn to get inside of the breakable walls near the Dark Carnival 2 event
+- Nerfed the No Mercy 5 and Cold Stream 3 first ladder deathcharges
+- Removed Promod 3.3.3 Hard Rain 4 alarm car event near end saferoom (path still exists, however)
+- Re-allowed Survivors to jump from the blue truck to the fences to the rooftop in Hard Rain 4
+- Significantly reduced hittables on Passing 1 due to balance issues. Reduced hittables slightly on Death Toll 1 opening area to allow early Tanks once again. 
+- Added back shopping carts on dead center 2 in the event area.
+
 
 Other Changes:
 - Added witch_announce and other small plugins that were needed or popularly requested, like the ones listed at the end of the Main Changes (thanks to Jahze, Sir and Visor).
