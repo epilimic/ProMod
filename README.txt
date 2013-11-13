@@ -235,6 +235,7 @@ Main Changes:
 - Significantly reduced hittables on Passing 1 due to balance issues. Reduced hittables slightly on Death Toll 1 opening area to allow early Tanks once again. 
 - Added back shopping carts on dead center 2 in the event area.
 - Added Connect Announce (You can customize it by editing addons/sourcemod/data/cannounce_settings.txt)
+- Fixed Death Toll 5 finale. Chrome / Silenced SMG always on the dock and 4 pills always on the fireplace in the picnic pavilion.
 
 Other Changes:
 - Added witch_announce and other small plugins that were needed or popularly requested, like the ones listed at the end of the Main Changes (thanks to Jahze, Sir and Visor).
