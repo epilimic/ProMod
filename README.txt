@@ -228,7 +228,6 @@ Main Changes:
 - Tank LOS delay reduced from 2 seconds to 1. 
 - Tank rage meter reduced from 20 seconds to 18.
 - Added Connect Announce (You can customize it by editing addons/sourcemod/data/cannounce_settings.txt)
-- Fixed Death Toll finale. Chrome / Silenced SMG always on the dock and 4 pills always on the fireplace in the picnic pavilion.
 - Fixed water slowdown not being applied in some cases. Tweaked value from 32.72% to 28%. 
 
 
@@ -242,6 +241,7 @@ Stripper Changes:
 - Significantly reduced hittables on Passing 1 due to balance issues. Reduced hittables slightly on Death Toll 1 opening area to allow early Tanks once again. 
 - Added back shopping carts on dead center 2 in the event area.
 - Added props to mitigate water slowdown on hard rain 3 after the sugarmill in an attempt to balance tank fights.
+- Fixed Death Toll finale. Chrome / Silenced SMG always on the dock and 4 pills always on the fireplace in the picnic pavilion.
 
 
 Other Changes:
