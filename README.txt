@@ -227,6 +227,12 @@ Main Changes:
 - Tank grace period reduced from 25 to 20. 
 - Tank LOS delay reduced from 2 seconds to 1. 
 - Tank rage meter reduced from 20 seconds to 18.
+- Added Connect Announce (You can customize it by editing addons/sourcemod/data/cannounce_settings.txt)
+- Fixed Death Toll finale. Chrome / Silenced SMG always on the dock and 4 pills always on the fireplace in the picnic pavilion.
+- Fixed water slowdown not being applied in some cases. Tweaked value from 32.72% to 28%. 
+
+
+Stripper Changes:
 - Modified or removed most or all of Promod 3.3.3's props. Props that hurt SI more than helped were tweaked or changed based on competitive feedback. Unnecessary/excessive props were removed.
 - Fixed or blocked several exploits, glitch spots, punch spots, and stuck spots
 - You no longer have to prespawn to get inside of the breakable walls near the Dark Carnival 2 event
@@ -235,9 +241,7 @@ Main Changes:
 - Re-allowed Survivors to jump from the blue truck to the fences to the rooftop in Hard Rain 4
 - Significantly reduced hittables on Passing 1 due to balance issues. Reduced hittables slightly on Death Toll 1 opening area to allow early Tanks once again. 
 - Added back shopping carts on dead center 2 in the event area.
-- Added Connect Announce (You can customize it by editing addons/sourcemod/data/cannounce_settings.txt)
-- Fixed Death Toll finale. Chrome / Silenced SMG always on the dock and 4 pills always on the fireplace in the picnic pavilion.
-- Fixed water slowdown not being applied in some cases. Tweaked value from 32.72% to 28%. 
+- Added props to mitigate water slowdown on hard rain 3 after the sugarmill in an attempt to balance tank fights. (These changes are reflected on map 2)
 
 
 Other Changes:
