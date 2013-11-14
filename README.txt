@@ -201,7 +201,8 @@ Changelog
 4.0
 Main Changes:
 - ProMod now uses damage bonus. Parity will now be the exact health bonus equivalent of ProMod.
-- Removed l4d_hots and l4d2_nobhaps from every config, enabling instant pill health and tank bhops.
+- Removed l4d2_nobhaps from every config, enabling tank bhops.
+- Fixed pills healing at half the intended speed.
 - Tweaked l4d2_startercommon: it now lowers the common limit on round start and instantly resets it upon leaving saferoom.
 - Added caster_assister to help spectators, especially streamers/casters, move around more naturally.
 - Added tank rock selector plugin, CanadaRox's version: just pressing Use or Reload alone will start the rock throw.
@@ -210,7 +211,6 @@ Main Changes:
 - Removed No Mercy 5 and Dead Center 4 wipefest flow tanks.
 - The 2nd finale tank (not counting possible flow tanks) is now blocked, to makes finales shorter and more survivable.
 - Hard Rain 2 now has 2 witches.
-- Hard Rain 1 only has 1 SMG and 1 pump shotgun in saferoom: to get more primary weapons players must go into the diner.
 - Increased pill count in 4v4 configs by 1.
 - Added zombie bat. He has a 0.1% chance to spawn in place of a tank.
 - Insta pounce is fixed (Hunters & Jockeys)
@@ -242,6 +242,7 @@ Stripper Changes:
 - Added back shopping carts on dead center 2 in the event area.
 - Added props to mitigate water slowdown on hard rain 3 after the sugarmill in an attempt to balance tank fights.
 - Fixed Death Toll finale. Chrome / Silenced SMG always on the dock and 4 pills always on the fireplace in the picnic pavilion.
+- Hard Rain 1 now only has 1 SMG and 1 pump shotgun in saferoom: to get more primary weapons players must go into the diner.
 
 
 Other Changes:
