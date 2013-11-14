@@ -220,7 +220,6 @@ Main Changes:
 - Blocked texture manager mathack.
 - Heavily reworked map distances. They were initially based on a mix of the typical distance and health scores as logged by the l4d2-logger, on a scale of 300 to 1000 (300 for parish 1, which was used as the base), with small human adjustments and about ~150-200 points being removed for each tank that will be blocked in 4.0. With the shift to DB, the goal will be to base the maximum distance scores strictly on the average damage bonus people have at the end of the map (another benefit of DB is that we can do that and end up with perfect scoring balance).
 - Changed charger scratch damage to 8 per hit.
-- Removed EXTRA water slowdown that confogl added. There is still the normal 22.72% decrease in speed (for a green survivor).
 - Replaced tank control plugin with Arti's new one. Now works with Custom Map Transitions and has new functionality like !givetank for admins.
 - Added tank pain fade, screen flashes red when being meleed from behind.
 - Reintroduced legacy "!match configname" feature. Note: Must type name correct. If you aren't 100% sure, just use the normal !match menu.
@@ -235,7 +234,9 @@ Main Changes:
 - Significantly reduced hittables on Passing 1 due to balance issues. Reduced hittables slightly on Death Toll 1 opening area to allow early Tanks once again. 
 - Added back shopping carts on dead center 2 in the event area.
 - Added Connect Announce (You can customize it by editing addons/sourcemod/data/cannounce_settings.txt)
-- Fixed Death Toll 5 finale. Chrome / Silenced SMG always on the dock and 4 pills always on the fireplace in the picnic pavilion.
+- Fixed Death Toll finale. Chrome / Silenced SMG always on the dock and 4 pills always on the fireplace in the picnic pavilion.
+- Fixed water slowdown not being applied in some cases. Tweaked value from 32.72% to 28%. 
+
 
 Other Changes:
 - Added witch_announce and other small plugins that were needed or popularly requested, like the ones listed at the end of the Main Changes (thanks to Jahze, Sir and Visor).
