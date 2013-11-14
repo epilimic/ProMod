@@ -209,10 +209,10 @@ Main Changes:
 - Added staggersolver to block button presses during stumbles.
 - Removed No Mercy 5 and Dead Center 4 wipefest flow tanks.
 - The 2nd finale tank (not counting possible flow tanks) is now blocked, to makes finales shorter and more survivable.
-- Hard Rain 2 has multiple witches again, but with reduced health (only 500).
+- Hard Rain 2 now has 2 witches.
 - Hard Rain 1 only has 1 SMG and 1 pump shotgun in saferoom: to get more primary weapons players must go into the diner.
-- 4v4 configs now have 1 extra pill.
-- Added zombie bat.
+- Increased pill count in 4v4 configs by 1.
+- Added zombie bat. He has a 0.1% chance to spawn in place of a tank.
 - Insta pounce is fixed (Hunters & Jockeys)
 - Ladderblocking is fixed, the blocker will simply be pushed away.
 - When a survivor dies, he/she will always drop his secondary weapon (Pistol, Melee)
