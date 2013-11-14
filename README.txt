@@ -241,7 +241,7 @@ Stripper Changes:
 - Re-allowed Survivors to jump from the blue truck to the fences to the rooftop in Hard Rain 4
 - Significantly reduced hittables on Passing 1 due to balance issues. Reduced hittables slightly on Death Toll 1 opening area to allow early Tanks once again. 
 - Added back shopping carts on dead center 2 in the event area.
-- Added props to mitigate water slowdown on hard rain 3 after the sugarmill in an attempt to balance tank fights. (These changes are reflected on map 2)
+- Added props to mitigate water slowdown on hard rain 3 after the sugarmill in an attempt to balance tank fights.
 
 
 Other Changes:
