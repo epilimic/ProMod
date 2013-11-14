@@ -205,7 +205,7 @@ Main Changes:
 - Tweaked l4d2_startercommon: it now lowers the common limit on round start and instantly resets it upon leaving saferoom.
 - Added caster_assister to help spectators, especially streamers/casters, move around more naturally.
 - Added tank rock selector plugin, CanadaRox's version: just pressing Use or Reload alone will start the rock throw.
-- Added l4d2_spitter_manage to allow people to opt for a new SI if they have a spitter when tank spawns. Press R.
+- Added l4d2_spitter_manager to allow people to opt for a new SI if they have a spitter when tank spawns. Press R.
 - Added staggersolver to block button presses during stumbles.
 - Removed No Mercy 5 and Dead Center 4 wipefest flow tanks.
 - The 2nd finale tank (not counting possible flow tanks) is now blocked, to makes finales shorter and more survivable.
