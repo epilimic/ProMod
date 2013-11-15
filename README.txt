@@ -229,6 +229,7 @@ Main Changes:
 - Tank rage meter reduced from 20 seconds to 18.
 - Added Connect Announce (You can customize it by editing addons/sourcemod/data/cannounce_settings.txt)
 - Fixed water slowdown not being applied in some cases. Tweaked value from 32.72% to 28%. 
+- Completely removed water slowdown in retro config.
 
 
 Stripper Changes:
