@@ -1,10 +1,7 @@
 Pro Mod - L4D2 Competitive Config - Version 4.0
 Website: http://l4dpromod.com
 
-Pro Mod is a configuration for Left 4 Dead 2 built for LGOFNOC [pre 4.0: Confogl] with the purpose of
-making competitive play more balanced and interesting. It's the most recent set of
-changes from an evolving set of ideas put forth from other configs such as Fresh
-and Metafogl, as well as the community.
+Pro Mod is a configuration for Left 4 Dead 2 built for LGOFNOC [pre 4.0: Confogl] with the purpose of making competitive play more balanced and interesting. It's the most recent set of changes from an evolving set of ideas put forth from other configs such as Fresh and Metafogl, as well as the community.
 
 Developer  : CircleSquared (inactive), Jacob, Stabby, epilimic
 Customfogl : EsToOpi, Jacob, Sir
