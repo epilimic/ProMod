@@ -7,6 +7,7 @@
 
 #define MAX_FOOTERS 10
 #define MAX_FOOTER_LEN 65
+#define MAXSOUNDS 5
 
 #define SOUND "/level/gnomeftw.wav"
 
@@ -54,6 +55,15 @@ new bool:isPlayerReady[MAXPLAYERS + 1];
 new footerCounter = 0;
 new readyDelay;
 new bool:blockSecretSpam[MAXPLAYERS + 1];
+
+new String:CountdownSound[MAXSOUNDS][]=
+{
+	"/npc/moustachio/strengthattract01.wav",
+	"/npc/moustachio/strengthattract02.wav",
+	"/npc/moustachio/strengthattract05.wav",
+	"/npc/moustachio/strengthattract06.wav",
+	"/npc/moustachio/strengthattract09.wav"
+};
 
 public APLRes:AskPluginLoad2(Handle:myself, bool:late, String:error[], err_max)
 {
@@ -117,6 +127,11 @@ public OnMapStart()
 {
 	/* OnMapEnd needs this to work */
 	PrecacheSound(SOUND);
+	PrecacheSound("buttons/blip1.wav");
+	for(new i=0; i<sizeof(CountdownSound); i++)
+	{
+		PrecacheSound(CountdownSound[i],true);
+	}
 	for (new client = 1; client <= MAXPLAYERS; client++)
 	{
 		blockSecretSpam[client] = false;
@@ -707,6 +722,7 @@ public Action:ReadyCountdownDelay_Timer(Handle:timer)
 	if (readyDelay == 0)
 	{
 		PrintHintTextToAll("Round is live!");
+		EmitSoundToAll(CountdownSound[GetRandomInt(0,MAXSOUNDS-1)]);
 		InitiateLive();
 		readyCountdownTimer = INVALID_HANDLE;
 		return Plugin_Stop;
@@ -714,6 +730,7 @@ public Action:ReadyCountdownDelay_Timer(Handle:timer)
 	else
 	{
 		PrintHintTextToAll("Live in: %d\nSay !unready to cancel", readyDelay);
+		EmitSoundToAll("buttons/blip1.wav", _, SNDCHAN_AUTO, SNDLEVEL_NORMAL, SND_NOFLAGS, 0.5);
 		readyDelay--;
 	}
 	return Plugin_Continue;

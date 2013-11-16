@@ -10,7 +10,7 @@ Developer  : CircleSquared (inactive), Jacob, Stabby, epilimic
 Customfogl : EsToOpi, Jacob, Sir
 Plugins    : CanadaRox, ProdigySim, Blade, Jahze, Jacob, Tabun, Vintik, Stabby, CircleSquared, Grego, purpletreefactory, Greenice, raziEiL
 VScripts   : Jacob, Tabun, CircleSquared
-Stripper   : Jacob, Blade, Tabun, Stabby, CircleSquared, Visor, NF
+Stripper   : Jacob, Blade, Tabun, Stabby, CircleSquared, Visor, epilimic
 Testing    : Ammo, bink, Button, cepS, Critical, Cuda, Dolemite, DustY, epilimic, Fever, Fig, hoveller, K9, Kobra, Laugh, Lazy, Lid, marr, Martine, Murtagh, purpletreefactory, Rjven, scalar, the ZKA! crew, and everyone at L4DNation.com
 Website    : Xan, Gen
 
@@ -201,18 +201,18 @@ Changelog
 4.0
 Main Changes:
 - ProMod now uses damage bonus. Parity will now be the exact health bonus equivalent of ProMod.
-- Removed l4d_hots and l4d2_nobhaps from every config, enabling instant pill health and tank bhops.
+- Removed l4d2_nobhaps from every config, enabling tank bhops.
+- Fixed pills healing at half the intended speed.
 - Tweaked l4d2_startercommon: it now lowers the common limit on round start and instantly resets it upon leaving saferoom.
 - Added caster_assister to help spectators, especially streamers/casters, move around more naturally.
 - Added tank rock selector plugin, CanadaRox's version: just pressing Use or Reload alone will start the rock throw.
-- Added l4d2_spitter_manage to allow people to opt for a new SI if they have a spitter when tank spawns. Press R.
+- Added l4d2_spitter_manager to allow people to opt for a new SI if they have a spitter when tank spawns. Press R.
 - Added staggersolver to block button presses during stumbles.
 - Removed No Mercy 5 and Dead Center 4 wipefest flow tanks.
 - The 2nd finale tank (not counting possible flow tanks) is now blocked, to makes finales shorter and more survivable.
-- Hard Rain 2 has multiple witches again, but with reduced health (only 500).
-- Hard Rain 1 only has 1 SMG and 1 pump shotgun in saferoom: to get more primary weapons players must go into the diner.
-- 4v4 configs now have 1 extra pill.
-- Added zombie bat.
+- Hard Rain 2 now has 2 witches.
+- Increased pill count in 4v4 configs by 1.
+- Added zombie bat. He has a 0.1% chance to spawn in place of a tank.
 - Insta pounce is fixed (Hunters & Jockeys)
 - Ladderblocking is fixed, the blocker will simply be pushed away.
 - When a survivor dies, he/she will always drop his secondary weapon (Pistol, Melee)
@@ -220,12 +220,19 @@ Main Changes:
 - Blocked texture manager mathack.
 - Heavily reworked map distances. They were initially based on a mix of the typical distance and health scores as logged by the l4d2-logger, on a scale of 300 to 1000 (300 for parish 1, which was used as the base), with small human adjustments and about ~150-200 points being removed for each tank that will be blocked in 4.0. With the shift to DB, the goal will be to base the maximum distance scores strictly on the average damage bonus people have at the end of the map (another benefit of DB is that we can do that and end up with perfect scoring balance).
 - Changed charger scratch damage to 8 per hit.
-- Removed water slowdown
 - Replaced tank control plugin with Arti's new one. Now works with Custom Map Transitions and has new functionality like !givetank for admins.
 - Added tank pain fade, screen flashes red when being meleed from behind.
 - Reintroduced legacy "!match configname" feature. Note: Must type name correct. If you aren't 100% sure, just use the normal !match menu.
 - Added glowism plugin. Call the vote in game with !realism to enable realism cvars. Saying !noglows will call a vote to only disable glows. (!glows and !unrealism will disable; admins can force either one)
-- Tank grace period reduced from 25 to 15. Tanks now immediately begin losing rage when they lose los (default 2 second buffer)
+- Tank grace period reduced from 25 to 20. 
+- Tank LOS delay reduced from 2 seconds to 1. 
+- Tank rage meter reduced from 20 seconds to 18.
+- Added Connect Announce (You can customize it by editing addons/sourcemod/data/cannounce_settings.txt)
+- Fixed water slowdown not being applied in some cases. Tweaked value from 32.72% to 28%. 
+- Completely removed water slowdown in retro config.
+
+
+Stripper Changes:
 - Modified or removed most or all of Promod 3.3.3's props. Props that hurt SI more than helped were tweaked or changed based on competitive feedback. Unnecessary/excessive props were removed.
 - Fixed or blocked several exploits, glitch spots, punch spots, and stuck spots
 - You no longer have to prespawn to get inside of the breakable walls near the Dark Carnival 2 event
@@ -234,7 +241,10 @@ Main Changes:
 - Re-allowed Survivors to jump from the blue truck to the fences to the rooftop in Hard Rain 4
 - Significantly reduced hittables on Passing 1 due to balance issues. Reduced hittables slightly on Death Toll 1 opening area to allow early Tanks once again. 
 - Added back shopping carts on dead center 2 in the event area.
-- Added Connect Announce (You can customize it by editing addons/sourcemod/data/cannounce_settings.txt)
+- Added props to mitigate water slowdown on hard rain 3 after the sugarmill in an attempt to balance tank fights.
+- Fixed Death Toll finale. Chrome / Silenced SMG always on the dock and 4 pills always on the fireplace in the picnic pavilion.
+- Hard Rain 1 now only has 1 SMG and 1 pump shotgun in saferoom: to get more primary weapons players must go into the diner.
+
 
 Other Changes:
 - Added witch_announce and other small plugins that were needed or popularly requested, like the ones listed at the end of the Main Changes (thanks to Jahze, Sir and Visor).
