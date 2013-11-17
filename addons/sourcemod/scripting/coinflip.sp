@@ -34,7 +34,9 @@ public OnPluginStart()
 	delay_time = CreateConVar("coinflip_delay","10", "Time delay in seconds between allowed coinflips. Set at -1 if no delay at all is desired.");
 
 	RegConsoleCmd("sm_coinflip", Command_Coinflip);
+	RegConsoleCmd("sm_cf", Command_Coinflip);
 	RegConsoleCmd("sm_picknumber", Command_Picknumber);
+	RegConsoleCmd("sm_roll", Command_Picknumber);
 	
 	AutoExecConfig(true, "coinflip"); // Automatically creates a config file, or uses it if it already exists
 }
