@@ -1,8 +1,0 @@
-"CustomJoinMessages"
-{
-	"STEAM_1:1:20980355"
-	{
-		"playerwasnamed"		"ę"
-		"message"		"!ready for HΔTSTRΔTS!"
-	}
-}
