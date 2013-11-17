@@ -148,4 +148,3 @@ public Action:MenuRefresh_Timer(Handle:timer)
 
 stock GetZombieClass(client) return GetEntProp(client, Prop_Send, "m_zombieClass");
 public DummyHandler(Handle:menu, MenuAction:action, param1, param2) { }
-
