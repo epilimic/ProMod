@@ -54,6 +54,8 @@ Builtin Votes
 L4D2 Direct
 LGOFNOC
 Match Vote
+Socket
+Connect Announce
 
 We have removed a few files that aren't needed for the sake of keeping the package a bit smaller. Things removed include binaries/gamedata for games other than l4d2, and the entire scripting folder of sourcemod.
 
@@ -125,6 +127,16 @@ Source: https://github.com/Stabbath/sm_plugins/tree/master/match_vote
 Install: Extract and upload to your server's /left4dead2/ folder.
 Important: Any prior version of match_vote is not compatible with LGOFNOC. You must replace your existing match_vote.smx from your server's addons/plugins/ folder for LGOFNOC to work.
 
+Socket
+Download: Socket (3.0.1alpha) http://l4dpromod.com/files/required/socket_3.0.1alpha.zip
+Source: http://forums.alliedmods.net/showthread.php?t=67640
+Install: Extract and upload to your server's /left4dead2/ folder.
+
+Connect Announce
+Download: Connect Announce (1.6) http://l4dpromod.com/files/required/cannounce_1.6.zip
+Source: http://forums.alliedmods.net/showthread.php?p=683858
+Install: Extract and upload to your server's /left4dead2/ folder.
+Note: This contains the full geoipcity package as well so you can have more localized info.
 
 Lastly, if you already have sdkhooks installed, you'll need to make sure these files aren't in your sourcemod folder:
 
@@ -171,6 +183,8 @@ Additional Q/A
 
   Additionally you may add the above line to your confogl_personalize.cfg so that it is
   universally loaded for all configs, but you must still edit matchmodes.txt.
+  
+  To make this MUCH easier, check out the Matchmodes.txt Generator @ http://buttsecs.org/mmgen
 
   ["SI sounds are off, I can hear SI spawns on survivor, or my teammates are invisible."]
 
@@ -260,7 +274,7 @@ Other Changes:
     - Starting common limit is set to 0.33 times common limit (from l4d2_startercommon).
     - Tank healths are 1000/2000/3000/4000 (multiply by 1.5 for the real versus value).
 - All item spawns are now handled by universal-item-manager.
-- Removed l4d_nocans, all canister, can and firework removal is now done by universal-item-manager.
+- Removed l4d_nocans, all canister, can and firework removal is now done by item-manager.
 - Changed the way plugins are loaded to be more developer-friendly. Plugin loads and cvar settings are divided into .cfg modules, selectively executed by each config that wants that module's features:
     - There's a .cfg for the standard promod settings.
     - There's a .cfg for each possible player number (1v1/2v2/3v3/4v4).
