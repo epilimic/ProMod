@@ -35,6 +35,8 @@ new Handle:l4d_ready_disable_spawns;
 new Handle:l4d_ready_cfg_name;
 new Handle:l4d_ready_survivor_freeze;
 new Handle:l4d_ready_max_players;
+new Handle:	hEnabled;
+new bool:	bEnabled;
 
 // Game Cvars
 new Handle:director_no_specials;
@@ -115,6 +117,10 @@ public OnPluginStart()
 #endif
 
 	LoadTranslations("common.phrases");
+
+	hEnabled = CreateConVar("l4d_readyup_sounds_enabled", "1", "Enable blips & chuckle during countdown");
+	HookConVarChange(hEnabled, Enabled_Changed);
+	bEnabled = GetConVarBool(hEnabled);
 }
 
 public OnPluginEnd()
@@ -719,7 +725,7 @@ InitiateLiveCountdown()
 
 public Action:ReadyCountdownDelay_Timer(Handle:timer)
 {
-	if (readyDelay == 0)
+	if (readyDelay == 0 && bEnabled == true)
 	{
 		PrintHintTextToAll("Round is live!");
 		EmitSoundToAll(CountdownSound[GetRandomInt(0,MAXSOUNDS-1)]);
@@ -727,10 +733,23 @@ public Action:ReadyCountdownDelay_Timer(Handle:timer)
 		readyCountdownTimer = INVALID_HANDLE;
 		return Plugin_Stop;
 	}
-	else
+	else if (readyDelay == 0)
+	{
+		PrintHintTextToAll("Round is live!");
+		InitiateLive();
+		readyCountdownTimer = INVALID_HANDLE;
+		return Plugin_Stop;
+	}
+
+	else if (bEnabled == true)
 	{
 		PrintHintTextToAll("Live in: %d\nSay !unready to cancel", readyDelay);
 		EmitSoundToAll("buttons/blip1.wav", _, SNDCHAN_AUTO, SNDLEVEL_NORMAL, SND_NOFLAGS, 0.5);
+		readyDelay--;
+	}
+	else
+	{
+		PrintHintTextToAll("Live in: %d\nSay !unready to cancel", readyDelay);
 		readyDelay--;
 	}
 	return Plugin_Continue;
@@ -807,4 +826,9 @@ public Action:killParticle(Handle:timer, any:entity)
 	{
 		AcceptEntityInput(entity, "Kill");
 	}
+}
+
+public Enabled_Changed(Handle:convar, const String:oldValue[], const String:newValue[])
+{
+	bEnabled = GetConVarBool(hEnabled);
 }
