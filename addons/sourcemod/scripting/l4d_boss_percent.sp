@@ -115,11 +115,11 @@ public Action:SaveBossFlows(Handle:timer)
 		if (iWitchPercent && iTankPercent)
 			Format(readyString, sizeof(readyString), "Tank: %d%%, Witch: %d%%", iTankPercent, iWitchPercent);
 		else if (iTankPercent)
-			Format(readyString, sizeof(readyString), "Tank: %d%%, Witch: None", iTankPercent);
+			Format(readyString, sizeof(readyString), "Tank: %d%%, No Flow Witch", iTankPercent);
 		else if (iWitchPercent)
-			Format(readyString, sizeof(readyString), "Tank: None, Witch: %d%%", iWitchPercent);
+			Format(readyString, sizeof(readyString), "No Flow Tank, Witch: %d%%", iWitchPercent);
 		else
-			Format(readyString, sizeof(readyString), "Tank: None, Witch: None");
+			Format(readyString, sizeof(readyString), "No Flow Tank or Witch");
 		AddStringToReadyFooter(readyString);
 	}
 }
@@ -129,17 +129,17 @@ stock PrintBossPercents(client)
 	if(GetConVarBool(hCvarTankPercent))
 	{
 		if (iTankPercent)
-			PrintToChat(client, "\x01Tank spawn: [\x04%d%%\x01]", iTankPercent);
+			PrintToChat(client, "\x01Tank: [\x04%d%%\x01]", iTankPercent);
 		else
-			PrintToChat(client, "\x01Tank spawn: [\x04None\x01]");
+			PrintToChat(client, "\x01No Flow Tank");
 	}
 
 	if(GetConVarBool(hCvarWitchPercent))
 	{
 		if (iWitchPercent)
-			PrintToChat(client, "\x01Witch spawn: [\x04%d%%\x01]", iWitchPercent);
+			PrintToChat(client, "\x01Witch: [\x04%d%%\x01]", iWitchPercent);
 		else
-			PrintToChat(client, "\x01Witch spawn: [\x04None\x01]");
+			PrintToChat(client, "\x01No Flow Witch");
 	}
 }
 
