@@ -285,6 +285,22 @@ Other Changes:
 	- etc...
 - Likely other smaller changes that were forgotten.
 
+3.3.3
+- Added plugin to track statistics for further balance changes (no private information is taken)
+- Added plugin to allow SI to warp to survivors as ghosts based on survivor position in map:
+    Use: sm_warpto "1-4" (ex 1=Front 4=Back) or "name" (such as Ellis or Louis)
+- Added plugin to keep being-shot hunters from losing pouncability against other objects
+- Added plugin for players to set scores directly in the event of a server crash
+    Use: !setscores "survivor score" "infected score" (non-admins will prompt a vote)
+- Added coinflip plugin to make neutral decisions on captains or teams (use !coinflip)
+- Updated Tabun's exploit blocker package to v29
+- Updated tank control to display who will get the tank at round start
+- Updated and readded heatseeking charger fix to kick instead of attempt to stop charge
+- Updated readyup plugin to fix a glitch that kept players from being able to pause
+- Removed temporarily punchstuckfix due to issues
+- Fixed horde from being unavailable when survivors reach certain sections of c1m2 and c5m2
+- Merged Customfogl into all packages (for custom campaign support)
+
 3.3 - Undocumented test release with changes to the main promod config alone, with an associated beta version
 - Updated Ready up, Pause, and Player Management.
 - Tweaked god frames to not reward gang bangs, but to still reward spit damage.
