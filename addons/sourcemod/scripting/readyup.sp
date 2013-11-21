@@ -118,7 +118,7 @@ public OnPluginStart()
 
 	LoadTranslations("common.phrases");
 
-	hEnabled = CreateConVar("l4d_readyup_sounds_enabled", "1", "Enable blips & chuckle during countdown");
+	hEnabled = CreateConVar("l4d_ready_sounds_enabled", "1", "Enable blips & chuckle during countdown");
 	HookConVarChange(hEnabled, Enabled_Changed);
 	bEnabled = GetConVarBool(hEnabled);
 }
